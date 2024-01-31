@@ -1,4 +1,3 @@
-import Box from '../../ui/Box/Box'
 import { Typography } from '../../ui/Typography'
 import card1 from '../../assets/series-card/1.png'
 import card2 from '../../assets/series-card/2.jpeg'
@@ -6,6 +5,7 @@ import card3 from '../../assets/series-card/3.jpeg'
 import card4 from '../../assets/series-card/4.jpeg'
 import Image, { StaticImageData } from 'next/image'
 import SwiperSlider from '../../ui/Swiper/Swiper'
+import {Box} from "../../ui/Box";
 
 const series = [
 	{

@@ -1,4 +1,4 @@
-import Box from '../ui/Box/Box'
+import {Box} from '../ui/Box'
 import Icon from '../Icon/Icon'
 import { FC, ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -18,7 +18,7 @@ export const BaseLayout: FC<Props> = ({ children }) => {
 	const route = useRouter()
 	const [open, setOpen] = useState(false)
 	return (
-		<Box className='flex gap-3 mt-10 relative z-10'>
+		<Box className='flex gap-3 mt-10 relative z-10 overflow-x-hidden'>
 			<Box className='flex flex-col items-center w-[144px] h-screen fixed'>
 				<Icon name='logo' size='default' onClick={() => route.push('/')} />
 				<Box

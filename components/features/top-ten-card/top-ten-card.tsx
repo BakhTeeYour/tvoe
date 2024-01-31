@@ -1,4 +1,4 @@
-import Box from '../../ui/Box/Box'
+import {Box} from '../../ui/Box'
 import Image, { StaticImageData } from 'next/image'
 import card1 from '../../assets/rating-card/1.png'
 import card2 from '../../assets/rating-card/2.png'
@@ -31,12 +31,12 @@ const style = {
 const RatingCard = (item: { image: StaticImageData; rating: number }) => {
 	return (
 		<Box className='w-[559px] mt-[33.5px] flex gap-[-80px]'>
-			<div
+			<Box
 				className='text-[360px] relative overflow-hidden cursor-pointer font-black italic'
 				style={style}
 			>
 				{item.rating}
-			</div>
+			</Box>
 			<Image
 				className='z-10 relative max-w-[398px] max-h-[597px] rounded-[20px]'
 				src={item.image}
@@ -50,12 +50,12 @@ const RatingCard = (item: { image: StaticImageData; rating: number }) => {
 const TopTenCard = () => {
 	return (
 		<Box className='mt-[110px] mb-[203px]'>
-			<div className='flex gap-5 items-center'>
+			<Box className='flex gap-5 items-center'>
 				<div className='text-[52px] font-black italic' style={style}>
 					ТОП-10
 				</div>
 				<div className='text-[40px] font-bold'>просмотров за неделю</div>
-			</div>
+			</Box>
 			<Box className='flex gap-[100px]'>
 				<SwiperSlider
 					items={items}

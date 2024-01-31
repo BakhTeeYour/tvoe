@@ -1,4 +1,4 @@
-import Box from '../../ui/Box/Box'
+import {Box} from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
 import SwiperSlider from '../../ui/Swiper/Swiper'
 import Image, { StaticImageData } from 'next/image'

@@ -1,4 +1,4 @@
-import Box from '../../ui/Box/Box'
+import {Box} from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
 import card1 from '../../assets/similar-card/1.jpeg'
 import card2 from '../../assets/similar-card/2.jpeg'

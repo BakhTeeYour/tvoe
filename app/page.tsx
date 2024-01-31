@@ -1,6 +1,6 @@
 'use client'
 import { BaseLayout } from '../components/layouts/BaseLayout'
-import Box from '../components/ui/Box/Box'
+import {Box} from '../components/ui/Box'
 import Image from 'next/image'
 import { Button } from '../components/ui/Button'
 import TvCard from '../components/features/tv-card/tv-card'

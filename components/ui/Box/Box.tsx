@@ -6,7 +6,7 @@ interface IBox
 	className?: string
 }
 
-const Box: FC<IBox> = ({ children, className, ...rest }) => {
+export const Box: FC<IBox> = ({ children, className, ...rest }) => {
 	return (
 		<div className={className} {...rest}>
 			{children}
@@ -14,4 +14,3 @@ const Box: FC<IBox> = ({ children, className, ...rest }) => {
 	)
 }
 
-export default Box
