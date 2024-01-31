@@ -48,11 +48,13 @@ const similar = [
 	}
 ]
 
-const RenderCard = (item: {
+type Props = {
 	id: number
 	image: StaticImageData
 	rating: number
-}) => {
+}
+
+const RenderCard = (item: Props) => {
 	return (
 		<Box>
 			<Image

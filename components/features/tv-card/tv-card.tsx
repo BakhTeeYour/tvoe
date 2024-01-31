@@ -35,11 +35,13 @@ const tvCardData = [
 	}
 ]
 
-const RenderCard = (item: {
+type Props = {
 	title: string
 	image: StaticImageData
 	rating: string
-}) => {
+}
+
+const RenderCard = (item: Props) => {
 	const route = useRouter()
 	return (
 		<Box

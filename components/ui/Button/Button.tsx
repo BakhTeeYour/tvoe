@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { FC, PropsWithChildren } from 'react'
 import { IconsName } from '../../theme/icons'
-import Icon from '../../Icon/Icon'
+import Icon from '../Icon/Icon'
 
 type Props = PropsWithChildren<{
 	size: 'medium'

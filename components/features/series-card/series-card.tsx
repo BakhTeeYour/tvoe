@@ -34,11 +34,13 @@ const series = [
 	}
 ]
 
-const RenderCard = (item: {
+type Props = {
 	series: string
 	duration: string
 	image: StaticImageData
-}) => {
+}
+
+const RenderCard = (item: Props) => {
 	return (
 		<Box className='flex flex-col gap-5'>
 			<Image

@@ -2,7 +2,7 @@
 import { BaseLayout } from '../../components/layouts/BaseLayout'
 import {Box} from '../../components/ui/Box'
 import Image from 'next/image'
-import Icon from '../../components/Icon/Icon'
+import Icon from '../../components/ui/Icon/Icon'
 import { Typography } from '../../components/ui/Typography'
 import { Button } from '../../components/ui/Button'
 import {Information, SeriesCard, SimilarCard, SeriesDescription} from "../../components/features";

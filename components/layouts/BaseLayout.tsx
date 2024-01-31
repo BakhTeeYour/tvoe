@@ -1,5 +1,5 @@
 import {Box} from '../ui/Box'
-import Icon from '../Icon/Icon'
+import Icon from '../ui/Icon/Icon'
 import { FC, ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Typography } from '../ui/Typography'

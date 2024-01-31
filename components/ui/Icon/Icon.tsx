@@ -1,4 +1,4 @@
-import { IconsName } from '../theme/icons'
+import { IconsName } from '../../theme/icons'
 import { FC } from 'react'
 import classNames from 'classnames'
 import LogoIcon from './icons/logo'

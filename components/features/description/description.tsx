@@ -1,6 +1,6 @@
 import {Box} from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
-import Icon from '../../Icon/Icon'
+import Icon from '../../ui/Icon/Icon'
 
 const SeriesDescription = () => {
 	return (
