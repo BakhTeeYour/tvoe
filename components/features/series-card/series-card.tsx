@@ -1,43 +1,14 @@
 import { Typography } from '../../ui/Typography'
-import card1 from '../../assets/series-card/1.png'
-import card2 from '../../assets/series-card/2.jpeg'
-import card3 from '../../assets/series-card/3.jpeg'
-import card4 from '../../assets/series-card/4.jpeg'
 import Image, { StaticImageData } from 'next/image'
 import SwiperSlider from '../../ui/Swiper/Swiper'
-import {Box} from "../../ui/Box";
-
-const series = [
-	{
-		id: 1,
-		duration: '43 минуты',
-		series: '1 серия',
-		image: card1
-	},
-	{
-		id: 2,
-		duration: '41 минуту',
-		series: '2 серия',
-		image: card2
-	},
-	{
-		id: 3,
-		duration: '38 минут',
-		series: '3 серия',
-		image: card3
-	},
-	{
-		id: 4,
-		duration: '42 минуты',
-		series: '4 серия',
-		image: card4
-	}
-]
+import { Box } from '../../ui/Box'
+import { seriesCard } from '../../../constants'
 
 type Props = {
 	series: string
 	duration: string
 	image: StaticImageData
+	id: number
 }
 
 const RenderCard = (item: Props) => {
@@ -82,7 +53,7 @@ const SeriesCard = () => {
 				</Box>
 			</Box>
 			<SwiperSlider
-				items={series}
+				items={seriesCard}
 				render={item => <RenderCard {...item} />}
 				slidesPerView={3.1}
 			/>

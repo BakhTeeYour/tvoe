@@ -1,52 +1,8 @@
-import {Box} from '../../ui/Box'
+import { Box } from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
-import card1 from '../../assets/similar-card/1.jpeg'
-import card2 from '../../assets/similar-card/2.jpeg'
-import card3 from '../../assets/similar-card/3.jpeg'
-import card4 from '../../assets/similar-card/4.png'
-import card5 from '../../assets/similar-card/5.jpeg'
-import card6 from '../../assets/similar-card/6.png'
-import card7 from '../../assets/similar-card/7.png'
 import Image, { StaticImageData } from 'next/image'
 import SwiperSlider from '../../ui/Swiper/Swiper'
-
-const similar = [
-	{
-		id: 1,
-		image: card1,
-		rating: 9.1
-	},
-	{
-		id: 2,
-		image: card2,
-		rating: 9.1
-	},
-	{
-		id: 3,
-		image: card3,
-		rating: 9.1
-	},
-	{
-		id: 4,
-		image: card4,
-		rating: 9.1
-	},
-	{
-		id: 5,
-		image: card5,
-		rating: 9.1
-	},
-	{
-		id: 6,
-		image: card6,
-		rating: 9.1
-	},
-	{
-		id: 7,
-		image: card7,
-		rating: 9.1
-	}
-]
+import { similar } from '../../../constants'
 
 type Props = {
 	id: number

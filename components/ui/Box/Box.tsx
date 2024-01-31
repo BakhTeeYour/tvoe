@@ -13,4 +13,3 @@ export const Box: FC<IBox> = ({ children, className, ...rest }) => {
 		</div>
 	)
 }
-

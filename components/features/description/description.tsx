@@ -1,4 +1,4 @@
-import {Box} from '../../ui/Box'
+import { Box } from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
 import Icon from '../../ui/Icon/Icon'
 

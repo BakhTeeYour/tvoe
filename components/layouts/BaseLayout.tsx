@@ -1,4 +1,4 @@
-import {Box} from '../ui/Box'
+import { Box } from '../ui/Box'
 import Icon from '../ui/Icon/Icon'
 import { FC, ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'

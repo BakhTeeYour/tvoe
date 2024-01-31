@@ -1,39 +1,9 @@
-import {Box} from '../../ui/Box'
+import { Box } from '../../ui/Box'
 import { Typography } from '../../ui/Typography'
 import SwiperSlider from '../../ui/Swiper/Swiper'
 import Image, { StaticImageData } from 'next/image'
-import card1 from '../../assets/tv-card/1.png'
-import card2 from '../../assets/tv-card/2.png'
-import card3 from '../../assets/tv-card/3.png'
-import card4 from '../../assets/tv-card/4.jpeg'
 import { useRouter } from 'next/navigation'
-
-const tvCardData = [
-	{
-		id: 1,
-		title: 'Синий жук',
-		image: card1,
-		rating: '10'
-	},
-	{
-		id: 2,
-		title: 'Домашняя игра',
-		image: card2,
-		rating: '6.9'
-	},
-	{
-		id: 3,
-		title: 'Салют 7',
-		image: card3,
-		rating: '5.7'
-	},
-	{
-		id: 4,
-		title: 'Поймай меня, если сможешь',
-		image: card4,
-		rating: '7.0'
-	}
-]
+import { tvCardData } from '../../../constants'
 
 type Props = {
 	title: string
