@@ -1,0 +1,12 @@
+export type IconsName =
+	| 'logo'
+	| 'arrow-up'
+	| 'human'
+	| 'favorite'
+	| 'tv'
+	| 'movie'
+	| 'home'
+	| 'search'
+	| 'wednesday'
+	| 'fav'
+	| 'attention'

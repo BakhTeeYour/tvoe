@@ -1,46 +1,32 @@
-import { IconsName, Size } from '../../theme'
 import classNames from 'classnames'
 import { FC, PropsWithChildren } from 'react'
-import { Link } from 'react-router-dom'
-import Icons from '../../Icons/Icons'
+import { IconsName } from '../../theme/icons'
+import Icon from '../../Icon/Icon'
 
 type Props = PropsWithChildren<{
-	size: Exclude<Size, 'xLarge' | 'xxLarge' | 'xSmall'>
-	color: 'primary' | 'secondary' | 'txtSecondary' | 'active' | 'disactive'
+	size: 'medium'
+	color: 'primary' | 'secondary'
 	leftIcon?: IconsName
 	rightIcon?: IconsName
 	disabled?: boolean
 	icon?: IconsName
-	type?: 'button' | 'link'
 	htmlType?: 'button' | 'submit' | 'reset'
-	href?: string
 	onClick?: () => void
 	isCenter?: boolean
 	className?: string
 }>
 
 const buttonSizes = {
-	small: 'py-[8px] px-[12px]',
-	medium: 'py-[12px] px-[20px]',
-	large: 'py-[14px] px-[24px]'
+	medium: 'py-[24px] px-[32px]'
 }
 
 const iconOnlyButtonSizes = {
-	small: 'p-[8px]',
-	medium: 'p-[10px]',
-	large: 'p-[12px]'
+	medium: 'p-[32px]'
 }
 
 const buttonColors = {
-	primary:
-		'bg-buttonPrimary-default border-buttonPrimary-default text-white hover:bg-buttonPrimary-hover hover:border-buttonPrimary-hover',
-	secondary:
-		'bg-white border-buttonSecondary-hover border text-black hover:bg-buttonSecondary-hover',
-	txtSecondary:
-		'bg-buttonSecondary-default border-buttonSecondary-default text-secondary hover:bg-buttonSecondary-hover',
-	active: 'bg-[#E4F5EE] border-[#E4F5EE] text-black text-base font-normal',
-	disactive:
-		'bg-buttonSecondary-default border-buttonSecondary-default text-black text-base font-normal'
+	primary: 'text-white',
+	secondary: 'text-white '
 }
 
 export const Button: FC<Props> = ({
@@ -51,31 +37,24 @@ export const Button: FC<Props> = ({
 	rightIcon,
 	disabled,
 	icon,
-	type = 'button',
 	htmlType = 'button',
-	href,
 	onClick,
 	isCenter = false,
 	className
 }) => {
-	const isButton = type === 'button'
 	const buttonSize = icon ? iconOnlyButtonSizes[size] : buttonSizes[size]
 	const buttonColor = buttonColors[color]
 	const buttonClasses = classNames(
 		'inline-flex',
-		'gap-x-[6px]',
-		'text-[14px] leading-[16px]',
-		color === 'active' || color === 'disactive'
-			? 'font-normal'
-			: 'font-semibold',
-		'rounded-[8px]',
+		'gap-x-[8px]',
+		'text-[30px]',
+		'font-medium',
+		'rounded-[16px]',
 		'items-center',
-		'border',
-		{ 'justify-between': color === 'active' || color === 'disactive' },
+		'justify-between',
 		className,
-		isButton ? buttonSize : 'p-0',
+		buttonSize,
 		buttonColor,
-		'disabled:bg-buttonPrimary-disabled disabled:border-buttonPrimary-disabled',
 		{
 			'justify-center': isCenter
 		},
@@ -84,27 +63,25 @@ export const Button: FC<Props> = ({
 
 	const content = (
 		<>
-			{leftIcon && <Icons name={leftIcon} size={size} />}
+			{leftIcon && <Icon name={leftIcon} size={size} />}
 			<span className='whitespace-nowrap'>
-				{icon ? <Icons name={icon} size={size} /> : children}
+				{icon ? <Icon name={icon} size={size} /> : children}
 			</span>
-			{rightIcon && <Icons name={rightIcon} size={size} />}
+			{rightIcon && <Icon name={rightIcon} size={size} />}
 		</>
 	)
 
-	const style = isButton
-		? {
-				boxShadow: '0px 1px 2px 0px rgba(16, 24, 40, 0.04)'
-			}
-		: {}
-
-	if (href) {
-		return (
-			<Link to={href} className={buttonClasses} style={style}>
-				{content}
-			</Link>
-		)
-	}
+	const style =
+		color === 'primary'
+			? {
+					background:
+						'var(--Gradient-Accent, linear-gradient(90deg, #6A11CB 0%, #2575FC 100%))'
+				}
+			: {
+					background:
+						'var(--gradient-white-50, linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.13) 50%, rgba(255, 255, 255, 0.10) 100%))',
+					backdropFilter: 'blur(10px)'
+				}
 
 	return (
 		<button

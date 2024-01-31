@@ -1,10 +1,9 @@
 import classNames from 'classnames'
 import { FC, PropsWithChildren } from 'react'
-import { textColor, textColors } from '../../theme'
 
 type Props = PropsWithChildren<{
 	size?: string
-	color: textColor
+	color: string
 	weight?: string
 	uppercase?: boolean
 	noWrap?: boolean
@@ -17,7 +16,7 @@ type Props = PropsWithChildren<{
 export const Typography: FC<Props> = ({
 	size = 'text-sm',
 	color,
-	weight = 'regular',
+	weight = 'text-normal',
 	children,
 	uppercase,
 	noWrap,
@@ -26,11 +25,9 @@ export const Typography: FC<Props> = ({
 	capitalize,
 	className
 }) => {
-	const textColor = textColors[color]
-
 	const typographyClasses = classNames(
 		size,
-		textColor,
+		color,
 		weight,
 		{
 			uppercase
