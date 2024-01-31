@@ -9,7 +9,7 @@ import TopTenCard from '../components/features/top-ten-card/top-ten-card'
 export default function Home() {
 	return (
 		<BaseLayout>
-			<Box className='w-full ml-[144px]'>
+			<Box className='w-full ml-[215px]'>
 				<Box className='flex flex-col items-center mr-[220px]'>
 					<Image
 						className='absolute z-[-1] -top-9 -right-10'

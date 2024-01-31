@@ -11,7 +11,7 @@ const Serial = () => {
 	return (
 		<BaseLayout>
 			<Box className='w-full'>
-				<Box className='flex flex-col ml-[144px] gap-[112px]'>
+				<Box className='flex flex-col ml-[215px] gap-[112px]'>
 					<Image
 						className='absolute z-[-1] -top-10 -right-10'
 						src='/serial.png'
