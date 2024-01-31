@@ -55,7 +55,7 @@ const SeriesCard = () => {
 			<SwiperSlider
 				items={seriesCard}
 				render={item => <RenderCard {...item} />}
-				slidesPerView={3.1}
+				slidesPerView={3.03}
 			/>
 		</Box>
 	)

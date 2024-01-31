@@ -19,7 +19,7 @@ const Serial = () => {
 						height={780}
 						width={1400}
 					/>
-					<Box className='max-w-[735px] flex flex-col gap-8'>
+					<Box className='max-w-[735px] mt-[90px] flex flex-col gap-8'>
 						<Icon name='wednesday' size='default' isCenter={false} />
 						<Box className='flex flex-col gap-5'>
 							<Box className='flex items-center gap-x-8'>

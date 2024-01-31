@@ -36,7 +36,7 @@ const SimilarCard = () => {
 			<SwiperSlider
 				items={similar}
 				render={item => <RenderCard {...item} />}
-				slidesPerView={6.2}
+				slidesPerView={6.1}
 			/>
 		</Box>
 	)

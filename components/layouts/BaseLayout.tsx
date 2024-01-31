@@ -18,8 +18,8 @@ export const BaseLayout: FC<Props> = ({ children }) => {
 	const route = useRouter()
 	const [open, setOpen] = useState(false)
 	return (
-		<Box className='flex gap-3 mt-10 relative z-10 overflow-x-hidden'>
-			<Box className='flex flex-col items-center w-[144px] h-screen fixed'>
+		<Box className='flex gap-3 relative z-10 max-w-[1920px] overflow-x-hidden'>
+			<Box className='flex mt-10 flex-col items-center w-[144px] h-screen fixed'>
 				<Icon name='logo' size='default' onClick={() => route.push('/')} />
 				<Box
 					className='flex flex-col mt-[110px]'

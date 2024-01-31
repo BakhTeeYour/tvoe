@@ -10,9 +10,9 @@ export default function Home() {
 	return (
 		<BaseLayout>
 			<Box className='w-full ml-[215px]'>
-				<Box className='flex flex-col items-center mr-[220px]'>
+				<Box className='flex flex-col items-center mr-[215px]'>
 					<Image
-						className='absolute z-[-1] -top-9 -right-10'
+						className='absolute z-[-1] -right-10'
 						src='/image.png'
 						alt=''
 						height={800}
@@ -43,8 +43,10 @@ export default function Home() {
 						</Box>
 					</Box>
 				</Box>
+				<Box className='max-w-[1724px]'>
 				<TvCard />
 				<TopTenCard />
+				</Box>
 			</Box>
 		</BaseLayout>
 	)
